@@ -13,6 +13,11 @@ service FretesService {
   rpc calculaFrete (CalculaFreteRequest) returns (CalculaFreteResponse){}
 }
 
+message ErroDetails{
+  int32 code = 1;
+  string message = 2;
+}
+
 message CalculaFreteRequest{
   string cep = 1;
 }
